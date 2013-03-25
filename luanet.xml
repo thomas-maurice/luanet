@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<makedeb>
+  <control>
+    <version>0.1</version>
+    <name>luanet</name>
+    <maintener>Thomas Maurice</maintener>
+    <mail>thomas.maurice@polytech-lille.fr </mail>
+    <desc>Projet d'exemple</desc>
+    <homepage>None</homepage>
+    <category>3</category>
+    <deps>
+      <package>bash</package>
+      <package>libluawrap</package>
+    </deps>
+  </control>
+
+  <dirs>
+    <dir>/usr/local/lib/lua/5.2/luanet</dir>
+    <dir>/usr/local/share/lua/5.2/luanet</dir>
+    <dir>/usr/local/man/man3</dir>
+  </dirs>
+
+  <files>
+    <file if="luanet/init.lua" of="/usr/local/share/lua/5.2/luanet" />
+    <file if="luanet/irc.lua" of="/usr/local/share/lua/5.2/luanet" />
+    <file if="luanet/socket.so" of="/usr/local/lib/lua/5.2/luanet" />
+    <file if="luanet/regex.so" of="/usr/local/lib/lua/5.2/luanet" />
+    <file if="luanet/sleep.so" of="/usr/local/lib/lua/5.2/luanet" />
+    <file if="luanet/misc.so" of="/usr/local/lib/lua/5.2/luanet" />
+    <file if="man/luanet.3.gz" of="/usr/local/man/man3" />
+  </files>
+</makedeb>
