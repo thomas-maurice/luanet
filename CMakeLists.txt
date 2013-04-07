@@ -38,7 +38,7 @@ INCLUDE_DIRECTORIES("include" ${LIBLUAWRAP_INCLUDE_DIRS} ${LUA_INCLUDE_DIRS})
 LINK_DIRECTORIES(${LUA_LIBRARY_DIRS} ${LIBLUANET_LIBRARY_DIRS})
 
 # Manpages
-SET(MAN_PAGES "man/luanet.3" "man/luanet.4")
+SET(MAN_PAGES "man/luanet.3")
 
 INCLUDE(cmake/BuildMan.cmake)
 
