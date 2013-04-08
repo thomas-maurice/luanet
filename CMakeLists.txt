@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 2.6)
 
 INCLUDE(cmake/FindGZIP.cmake)
 
-SET(CMAKE_INSTALL_PREFIX "/usr/local/share")
+SET(CMAKE_INSTALL_PREFIX "/usr/local")
 
 # PRoject name
 PROJECT(luanet)
@@ -130,8 +130,8 @@ TARGET_LINK_LIBRARIES(
 	${LUA_LIBRARIES}
 )
 
-INSTALL(TARGETS socket misc sleep regex DESTINATION "lua/5.2/luanet")
+INSTALL(TARGETS socket misc sleep regex DESTINATION "lib/lua/5.2/luanet")
 INSTALL(FILES ${PROJECT_SOURCE_DIR}/luanet/init.lua
              ${PROJECT_SOURCE_DIR}/luanet/irc.lua
              DESTINATION
-             "lua/5.2/luanet")
+             "lib/lua/5.2/luanet")
